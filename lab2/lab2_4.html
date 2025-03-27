@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Class Timetable</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Carousel for Announcements or Featured Subjects -->
+    <div id="classCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/1200x300" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Welcome to Your Class Timetable</h5>
+                    <p>Stay organized with your weekly schedule.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1200x300" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Upcoming Exams</h5>
+                    <p>Check your schedule and be prepared.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#classCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#classCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <!-- Class Timetable -->
+    <div class="container">
+        <h2 class="text-center mb-4">Class Timetable</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00 AM - 10:00 AM</td>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>English</td>
+                        <td>Biology</td>
+                        <td>Chemistry</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM - 11:00 AM</td>
+                        <td>Computer Science</td>
+                        <td>History</td>
+                        <td>Physics</td>
+                        <td>Math</td>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM - 12:00 PM</td>
+                        <td>Chemistry</td>
+                        <td>Computer Science</td>
+                        <td>Math</td>
+                        <td>History</td>
+                        <td>Biology</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

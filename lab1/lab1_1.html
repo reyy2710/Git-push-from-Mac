@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table & Image Animation</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: inline-block;
+            position: relative;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Alternate row colors */
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #d1e7fd;
+        }
+
+        img {
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        /* Button styling */
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Table & Image Animation</h2>
+    
+    <div class="container" id="animateDiv">
+        <!-- 3x3 Table -->
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>22</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>25</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>28</td>
+                <td>Chicago</td>
+            </tr>
+        </table>
+
+        <!-- Image -->
+        <img src="/Users/shreyab/Desktop/wp1/codex.png" alt="Sample Image">
+    </div>
+
+    <!-- Button to Move Table & Image -->
+    <button onclick="moveTable()">Move Right to Left</button>
+
+    <script>
+        function moveTable() {
+            document.getElementById("animateDiv").style.transform = "translateX(-200px)";
+        }
+    </script>
+
+</body>
+</html>
