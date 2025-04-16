@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Promotion Eligibility</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function checkEligibility() {
+            let emp_id = document.getElementById("empId").value;
+            if (emp_id) {
+                $.get("/check_promotion/", { emp_id: emp_id }, function(data) {
+                    document.getElementById("result").innerText = "Promotion Eligibility: " + data.eligible;
+                }).fail(function() {
+                    alert("Error fetching data!");
+                });
+            } else {
+                alert("Please select an employee.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Employee Promotion Eligibility Check</h2>
+    <form>
+        <label for="empId">Employee ID:</label>
+        <select id="empId" name="emp_id">
+            <option value="">Select Employee</option>
+            {% for employee in employees %}
+                <option value="{{ employee.emp_id }}">{{ employee.emp_id }} - {{ employee.name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="button" onclick="checkEligibility()">Am I Eligible for Promotion?</button>
+    </form>
+    <br><br>
+    <label>Result: <span id="result"></span></label>
+</body>
+</html>
